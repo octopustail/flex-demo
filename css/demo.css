@@ -117,8 +117,9 @@ flex-wrap属性
 }
 
 /* 一个absolute的例子*/
+
 .demo5 .son{
-    
+    position: relative;
     width:300px;
     height:300px;
 }
@@ -126,7 +127,6 @@ flex-wrap属性
 .demo5 .pos-absolute{
     background: #fff;
     position: absolute;
-    left: 40%;
 }
 
 /* grid */
@@ -144,6 +144,14 @@ flex-wrap属性
 这里有一个知识点是box-sizng的设置。content-box的尺寸就是内容的尺寸，不包括padding和border。这样以来设置百分比的时候就会有问题。
 所以使用border-box， 尺寸为内容尺寸+padding+border。设置百分比的时候计算就会方便一点。另一方面，如果有margin的值的话，设置百分比的时候也需要考虑margin的值。
 */
+.inside{
+    height:80px;
+    width: 100px;
+    background:#396;
+    box-sizing: border-box;
+    margin: 0 auto;
+    
+}
 @media (max-width: 480px){
 .demo7 .vater{
     display: flex;
@@ -167,6 +175,7 @@ flex-wrap属性
     .demo7 .son{
         margin:0;
         height:100px;
+        width: 100px;
         width: 25%;
         border: 1px solid #333;
         box-sizing: border-box;
